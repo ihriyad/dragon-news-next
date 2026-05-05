@@ -1,7 +1,29 @@
 import React from "react";
-
+import NavLink from "./NavLink";
+import Image from "next/image";
+import user from "@/assets/user.png";
+import Link from "next/link";
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <div className="container mx-auto flex mt-6 justify-between items-center gap-3">
+      <div></div>
+      <ul className="flex gap-4 justify-center text-gray-700">
+        <li>
+          <NavLink href={"/"}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink href={"/about"}>About</NavLink>
+        </li>
+        <li>
+          <NavLink href={"/contact"}>Contact</NavLink>
+        </li>
+      </ul>
+      <div className="flex justify-center items-center gap-3">
+        <Image src={user} alt="user" height={50} width={40}></Image>
+        <Link href={'/login'}><button className="btn bg-purple-400 text-accent-content">Login</button></Link>
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;
