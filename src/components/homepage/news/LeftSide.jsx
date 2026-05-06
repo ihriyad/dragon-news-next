@@ -7,7 +7,7 @@ const LeftSide = ({ category, activeId }) => {
       {category.map((item) => (
         <li
           key={item.category_id}
-          className={`${activeId === item.category_id && "font-bold text-black"}`}
+          className={`${activeId === item.category_id && "bg-slate-200 p-3 text-gray-700 rounded-md"}`}
         >
           <Link href={`/category/${item.category_id}`} className="block">
             {item.category_name}

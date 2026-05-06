@@ -6,8 +6,8 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="container mx-auto flex mt-6 justify-between items-center gap-3">
-      <div></div>
-      <ul className="flex gap-4 justify-center text-gray-700">
+      <div className="text-2xl font-extralight">Dragon News</div>
+      <ul className="flex gap-4 items-center text-gray-700">
         <li>
           <NavLink href={"/"}>Home</NavLink>
         </li>
