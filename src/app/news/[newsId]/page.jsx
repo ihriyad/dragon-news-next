@@ -3,8 +3,22 @@ import { getNewsDetails } from "@/lib/data";
 import React from "react";
 import NewsDetails from "../components/NewsDetails";
 import Link from "next/link";
-import { FaArrowRightArrowLeft } from "react-icons/fa6";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+import { FaArrowLeft } from "react-icons/fa";
+
+export const generateMetadata = async ({ params }) => {
+  const { newsId } = params;
+
+  const data = await getNewsDetails(newsId);
+  const details = data.data;
+
+  const news = details[0];
+
+  return {
+    title: news?.title,
+    description: news?.description,
+  };
+};
 
 const NewsDetailsPage = async ({ params }) => {
   const { newsId } = await params;
@@ -29,7 +43,6 @@ const NewsDetailsPage = async ({ params }) => {
         <h2 className="font-bold mb-2">Login with</h2>
         <RightSide></RightSide>
       </div>
-      
     </div>
   );
 };
