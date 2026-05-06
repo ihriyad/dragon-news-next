@@ -6,11 +6,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 px-6">
       <div className="text-center max-w-lg">
-        {/* Big 404 */}
-        <h1 className="text-7xl sm:text-8xl font-extrabold text-gray-800">
-          404
-        </h1>
-
         {/* Title */}
         <h2 className="mt-4 text-2xl sm:text-3xl font-semibold text-gray-700">
           Page not found
@@ -36,28 +31,6 @@ export default function NotFound() {
           >
             Go Back
           </button>
-        </div>
-
-        {/* Optional illustration */}
-        <div className="mt-10">
-          <svg
-            className="w-full max-w-xs mx-auto"
-            viewBox="0 0 200 150"
-            fill="none"
-          >
-            <circle cx="100" cy="75" r="70" fill="#E5E7EB" />
-            <text
-              x="50%"
-              y="50%"
-              textAnchor="middle"
-              dy=".3em"
-              fontSize="28"
-              fill="#9CA3AF"
-              fontWeight="bold"
-            >
-              Oops!
-            </text>
-          </svg>
         </div>
       </div>
     </div>

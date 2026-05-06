@@ -20,7 +20,7 @@ const Navbar = () => {
       </ul>
       <div className="flex justify-center items-center gap-3">
         <Image src={user} alt="user" height={50} width={40}></Image>
-        <Link href={'/login'}><button className="btn bg-purple-400 text-accent-content">Login</button></Link>
+        <Link href={'/login'}><button className="btn bg-red-400 text-white">Login</button></Link>
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
 import Link from "next/link";
 import React from "react";
 
-const LeftSide = ({ news, activeId }) => {
+const LeftSide = ({ category, activeId }) => {
   return (
     <div className="list-none text-gray-400 space-y-3">
-      {news.map((n) => (
+      {category.map((item) => (
         <li
-          key={n.category_id}
-          className={`${activeId === n.category_id && "font-bold text-black"}`}
+          key={item.category_id}
+          className={`${activeId === item.category_id && "font-bold text-black"}`}
         >
-          <Link href={`${n.category_id}`} className="block">
-            {n.category_name}
+          <Link href={`/category/${item.category_id}`} className="block">
+            {item.category_name}
           </Link>
         </li>
       ))}
